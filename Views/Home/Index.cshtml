@@ -1,0 +1,26 @@
+﻿@model  IEnumerable<Project.Models.GrantType>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h2>Index</h2>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.GrantTypeName)</th>
+            <th>@Html.DisplayNameFor(model => model.GrantTypeDescription)</th>
+            <th>@Html.DisplayNameFor(model => model.GrantTypemaximum)</th>
+            <th>@Html.DisplayNameFor(model => model.GrantTypeLifetimeMaximum)</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.GrantTypeName)</td>
+                <td>@Html.DisplayFor(modelItem => item.GrantTypeDescription)</td>
+                <td>@Html.DisplayFor(modelItem => item.GrantTypemaximum)</td>
+                <th>@Html.DisplayFor(modelItem => item.GrantTypeLifetimeMaximum)</th>
+            </tr>
+        }
+    </table>
+</div>
